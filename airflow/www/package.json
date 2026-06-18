@@ -6,7 +6,9 @@
     "prod": "NODE_ENV=production node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --colors --progress",
     "build": "NODE_ENV=production webpack --colors --progress",
     "lint": "eslint --ignore-path=.eslintignore --ext .js,.html .",
-    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html ."
+    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html .",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Apache",
   "license": "Apache-2.0",
@@ -72,6 +74,8 @@
     "moment-timezone": "^0.5.28",
     "nvd3": "^1.8.6",
     "redoc": "^2.0.0-rc.48",
-    "url-search-params-polyfill": "^8.1.0"
-  }
+    "url-search-params-polyfill": "^8.1.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
