@@ -6,7 +6,9 @@
     "prod": "NODE_ENV=production node --max_old_space_size=4096 ./node_modules/webpack/bin/webpack.js -p --colors --progress",
     "build": "NODE_ENV=production webpack --colors --progress",
     "lint": "eslint --ignore-path=.eslintignore --ext .js,.html .",
-    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html ."
+    "lint:fix": "eslint --fix --ignore-path=.eslintignore --ext .js,.html .",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Apache",
   "license": "Apache-2.0",
@@ -62,16 +64,18 @@
     "d3": "^3.4.4",
     "d3-tip": "^0.9.1",
     "dagre-d3": "^0.6.4",
-    "datatables.net": "^1.10.23",
-    "datatables.net-bs": "^1.10.23",
+    "datatables.net": "^1.11.3",
+    "datatables.net-bs": "^1.11.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
-    "jquery": ">=3.4.0",
+    "jquery": ">=3.5.0",
     "js-yaml": "^3.14.0",
-    "jshint": "^2.12.0",
-    "lodash": "^4.17.20",
+    "jshint": "^2.13.4",
+    "lodash": "^4.17.21",
     "moment-timezone": "^0.5.28",
     "nvd3": "^1.8.6",
     "redoc": "^2.0.0-rc.48",
-    "url-search-params-polyfill": "^8.1.0"
-  }
+    "url-search-params-polyfill": "^8.1.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
